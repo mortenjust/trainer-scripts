@@ -6,7 +6,7 @@ if [ -z $TFBASE ]
     then 
         echo "Recommended: export TFBASE=/path/to/tf_files" ; 
         echo "Using /tf_files" ;
-        export TFBASE=/tf_file        
+        export TFBASE=/tf_files      
     else 
         echo "TFBASE set" ; 
 fi
