@@ -1,5 +1,5 @@
-start_time=`date +%s`
 source $(dirname $0)/_vars.sh
+start_time=`date +%s`
 
 LOGFILE=$TFBASE/log-resized-images.txt
 
@@ -34,4 +34,4 @@ do
 
     echo "$(date)  $IMAGE" >> $LOGFILE
 done
-echo "Done. Took $(expr `date +%s` - $start_time)s"
+echo "Done. Resizing took $(expr `date +%s` - $start_time)s"
