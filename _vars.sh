@@ -9,8 +9,6 @@ if [ -z $TFBASE ]
         echo "TFBASE set" ; 
 fi
 
-
-
 echo processing images from $TFBASE
 
 LARGEIMAGES=$TFBASE/images/originals
