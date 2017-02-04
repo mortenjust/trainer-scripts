@@ -3,12 +3,12 @@ source $(dirname $0)/_vars.sh
 echo 
 
 # extract all videos
-extractframes.sh $TFBASE/videos/*
+$(dirname $0)/extractframes.sh $TFBASE/videos/*
 
 # resize all images
-find $TFBASE/images/originals -type f \( -name "*.jpg" -or -name "*.JPG" \) | xargs resizeimage.sh # -f
+find $TFBASE/images/originals -type f \( -name "*.jpg" -or -name "*.JPG" \) | xargs $(dirname $0)/resizeimage.sh # -f
 
 # train
 echo "Now ready to train"
 
-train.sh
+$(dirname $0)/train.sh
