@@ -10,3 +10,5 @@ find $TFBASE/images/originals -type f \( -name "*.jpg" -or -name "*.JPG" \) | xa
 
 # train
 echo "Now ready to train"
+
+train.sh
