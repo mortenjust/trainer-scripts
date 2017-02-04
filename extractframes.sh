@@ -1,7 +1,8 @@
 # takes a video file and extracts all frames
 # videos can be named VIDEO-01.MOV or video.MOV or video.MPG and so on
 
-source $(dirname $0)/_vars.sh
+# do we have our vars (are we embedded)? If not, run _vars
+[ -z "$SMALLIMAGES" ] && . $(dirname $0)/_vars.sh
 
 LOGFILE=$TFBASE/log-extracted-video-frames.txt
 
