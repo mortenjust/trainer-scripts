@@ -7,9 +7,9 @@ then
     # delete bottlenecks TODO
 
     # delete resized images
-    rm $TFBASE/images/resized/*
+    rm -rf $TFBASE/images/resized/*
 
     # delete logs
-    rm $TFBASE/*.txt
+    rm -rf $TFBASE/*.txt
     
 fi
