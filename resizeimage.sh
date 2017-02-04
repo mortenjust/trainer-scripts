@@ -1,4 +1,7 @@
-source $(dirname $0)/_vars.sh
+# source $(dirname $0)/_vars.sh
+
+[ -z "$SMALLIMAGES" ] && . $(dirname $0)/_vars.sh
+
 start_time=`date +%s`
 
 LOGFILE=$TFBASE/log-resized-images.txt
@@ -26,7 +29,7 @@ do
     # grab label from foldername - /folder/label-name/image.JPG = label-name
     LABEL=$(basename $(dirname $IMAGE))
 
-    echo "Resizing $(basename $IMAGE) for label $LABEL"
+    echo "Resizing $(basename $IMAGE) for label $LABEL into $SMALLIMAGES/$LABEL"
 
     mkdir -p $SMALLIMAGES/$LABEL
 

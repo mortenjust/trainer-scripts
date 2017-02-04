@@ -1,5 +1,7 @@
 source $(dirname $0)/_vars.sh
 
+echo 
+
 # extract all videos
 extractframes.sh $TFBASE/videos/*
 
