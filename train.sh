@@ -11,6 +11,14 @@ python /tensorflow/tensorflow/examples/image_retraining/retrain.py \
 --output_labels=$TFBASE/model/retrained_labels.txt \
 --image_dir $TFBASE/images/resized
 
+/tensorflow/bazel-bin/tensorflow/python/tools/strip_unused \
+--input_graph=$TFBASE/model/retrained_graph.pb \
+--output_graph=$TFBASE/model/retrained_graph_stripped.pb \
+--input_node_names=Mul \
+--output_node_names=final_result \
+--input_binary=true
+
+
 ## faster and worse:
 # python /tensorflow/tensorflow/examples/image_retraining/retrain.py \
 # --bottleneck_dir=$TFBASE/bottlenecks \
